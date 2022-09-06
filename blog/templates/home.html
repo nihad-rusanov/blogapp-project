@@ -1,0 +1,35 @@
+<h1>Hey, Welcome</h1>
+
+<a href="addBlog/">Blog ekle</a>
+
+{% for blog in blogs %}
+
+<ul >
+    <li class="user"><h2>{{ blog.name }}</h2></li>
+    <li class="title">{{ blog.title }}</li>
+    <li class="description">{{ blog.description }}</li>
+    <a class="update" href="updateBlog/{{ blog.id }}">Update</a>
+    <a class="delete" href="deleteBlog/{{ blog.id }}">Delete</a>
+</ul>
+
+{% endfor %}
+
+
+
+<style>
+    ul {
+    list-style-type: none;
+    background-color: rgb(48, 167, 237);
+    width: 500px;
+    }
+    li{
+        color: white;
+    }
+    .update{
+        color:rgb(113, 128, 0)
+    }
+    .delete{
+        color:red
+    }
+
+</style>
